@@ -1,9 +1,13 @@
+import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
 import com.hp.hpl.jena.ontology.DatatypeProperty;
+import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.ObjectProperty;
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.Ontology;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.vocabulary.XSD;
 
 
@@ -19,9 +23,11 @@ public class facebookRelations {
 	public OntClass media;
 	public OntClass video;
 	public OntClass picture;
-
+	public OntClass department;
+	
 	public DatatypeProperty hasAge;
 	public DatatypeProperty hasBirthday;
+	public DatatypeProperty graduatedIn;
 
 	public ObjectProperty hasSibling;
 	public ObjectProperty hasSister;
@@ -36,18 +42,29 @@ public class facebookRelations {
 	public ObjectProperty inVideo;
 	public ObjectProperty hasPicture;
 	public ObjectProperty inPicture;
-
+	public ObjectProperty hasDepartment;
+	public ObjectProperty hasGraduated;
+	public ObjectProperty inSchool;
+	
 	public OntModel ontModel;
 	public String ns;
 	public String baseURI;
+	
 
 	public facebookRelations(){
 
 		ontModel = ModelFactory.createOntologyModel();
 		ns = new String("http://www.facebook.com/onto1#");
 		baseURI = new String("http://www.facebook.com/onto1");
-		Ontology onto = ontModel.createOntology(baseURI);		
+		Ontology onto = ontModel.createOntology(baseURI);	
+		initializeClasses();
+		intializeDatatypeProperties();
+		initializeObjectProperties();
+		setSubclasses();
+		setDisjoints();
+		setDomainAndRange();
 	}
+
 
 	public void initializeClasses(){
 
@@ -58,6 +75,7 @@ public class facebookRelations {
 		elementarySchool = ontModel.createClass(ns + "ElementarySchool");
 		highSchool	     = ontModel.createClass(ns + "HighSchool");
 		university 		 = ontModel.createClass(ns + "University");
+		department 		 = ontModel.createClass(ns + "Department");
 		media 			 = ontModel.createClass(ns + "Media");
 		video 			 = ontModel.createClass(ns + "Video");
 		picture			 = ontModel.createClass(ns + "Picture");
@@ -67,6 +85,7 @@ public class facebookRelations {
 
 		hasAge			 = ontModel.createDatatypeProperty(ns + "hasAge");
 		hasBirthday		 = ontModel.createDatatypeProperty(ns + "hasBirthday");
+		graduatedIn 	 = ontModel.createDatatypeProperty(ns + "graduatedIn");
 	}
 
 	public void initializeObjectProperties(){
@@ -84,6 +103,8 @@ public class facebookRelations {
 		inVideo			 = ontModel.createObjectProperty(ns + "inVideo");
 		hasPicture		 = ontModel.createObjectProperty(ns + "hasPicture");
 		inPicture 		 = ontModel.createObjectProperty(ns + "inPicture");
+		hasDepartment    = ontModel.createObjectProperty(ns + "hasDepartment");
+		hasGraduated     = ontModel.createObjectProperty(ns + "hasGraduated");
 	}
 
 	public void setSubclasses(){
@@ -120,14 +141,22 @@ public class facebookRelations {
 
 		video.addDisjointWith(picture);
 		picture.addDisjointWith(video);
+		
+		
 	}
 
 	public void setDomainAndRange(){
 
+		hasGraduated.setDomain(person);
+		hasGraduated.setRange(department);
+		
 		hasAge.setDomain(person);
 		hasAge.setDomain(school);
 		hasAge.setRange(XSD.integer);
 
+		graduatedIn.setDomain(person);
+		graduatedIn.setRange(XSD.date);
+		
 		hasBirthday.setDomain(person);
 		hasBirthday.setRange(XSD.date);
 
@@ -137,5 +166,7 @@ public class facebookRelations {
 		hasParent.setDomain(person);
 		hasParent.setRange(person);
 
+		hasDepartment.setDomain(university);
+		hasDepartment.setRange(department);
 	}
 }
