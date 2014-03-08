@@ -1,0 +1,233 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.facebook.com/onto1#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasBrother">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#hasSibling"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Animal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#bornIn">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#City"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasParent">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#inMedia">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Media"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#liked">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Media"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Animal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#graduatedIn">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#ComputerScience">
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#Department"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Media">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasAge">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#School"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#NYC">
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#City"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Wendy">
+    <j.0:hasPicture rdf:resource="http://www.facebook.com/onto1#profPic"/>
+    <j.0:inVideo rdf:resource="http://www.facebook.com/onto1#dogVid"/>
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#Dog"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasMedia">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Media"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Video">
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#Picture"/>
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#Media"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#HighSchool">
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#University"/>
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#ElementarySchool"/>
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#School"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#School">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasGraduated">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Department"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasMother">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#hasParent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Picture">
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#Video"/>
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#Media"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#ElementarySchool">
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#University"/>
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#HighSchool"/>
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#School"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasSister">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#hasSibling"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://www.facebook.com/onto1#hasDepartment"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#MalePerson">
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#FemalePerson"/>
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Picture1">
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#Picture"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasPet">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Animal"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Istanbul">
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#City"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#University">
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#HighSchool"/>
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#ElementarySchool"/>
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#School"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#inVideo">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#inMedia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasBirthday">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasVideo">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#hasMedia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasDog">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#hasPet"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#dogVid">
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#Video"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasPicture">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#hasMedia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#livesIn">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#City"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#John">
+    <j.0:hasFriend rdf:resource="http://www.facebook.com/onto1#Jane"/>
+    <j.0:liked rdf:resource="http://www.facebook.com/onto1#profPic"/>
+    <j.0:inPicture rdf:resource="http://www.facebook.com/onto1#Picture1"/>
+    <j.0:hasPicture rdf:resource="http://www.facebook.com/onto1#Picture1"/>
+    <j.0:graduatedIn rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004</j.0:graduatedIn>
+    <j.0:hasGraduated rdf:resource="http://www.facebook.com/onto1#ComputerScience"/>
+    <j.0:hasBirthday rdf:datatype="http://www.w3.org/2001/XMLSchema#date">31.07.1980</j.0:hasBirthday>
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#MalePerson"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasFather">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#hasParent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasFriend">
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#StanfordUniversity">
+    <j.0:hasDepartment rdf:resource="http://www.facebook.com/onto1#ComputerScience"/>
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#University"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#FemalePerson">
+    <owl:disjointWith rdf:resource="http://www.facebook.com/onto1#MalePerson"/>
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#inPicture">
+    <rdfs:subPropertyOf rdf:resource="http://www.facebook.com/onto1#inMedia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#City">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasSibling">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Dog">
+    <rdfs:subClassOf rdf:resource="http://www.facebook.com/onto1#Animal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Jane">
+    <j.0:hasFriend rdf:resource="http://www.facebook.com/onto1#John"/>
+    <j.0:liked rdf:resource="http://www.facebook.com/onto1#profPic"/>
+    <j.0:hasVideo rdf:resource="http://www.facebook.com/onto1#dogVid"/>
+    <j.0:inVideo rdf:resource="http://www.facebook.com/onto1#dogVid"/>
+    <j.0:inPicture rdf:resource="http://www.facebook.com/onto1#Picture1"/>
+    <j.0:livesIn rdf:resource="http://www.facebook.com/onto1#Istanbul"/>
+    <j.0:bornIn rdf:resource="http://www.facebook.com/onto1#NYC"/>
+    <j.0:hasBirthday rdf:datatype="http://www.w3.org/2001/XMLSchema#date">31.07.1980</j.0:hasBirthday>
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#FemalePerson"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="http://www.facebook.com/onto1#hasAge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#profPic">
+    <rdf:type rdf:resource="http://www.facebook.com/onto1#Picture"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#hasDepartment">
+    <rdfs:range rdf:resource="http://www.facebook.com/onto1#Department"/>
+    <rdfs:domain rdf:resource="http://www.facebook.com/onto1#University"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.facebook.com/onto1#Department">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
